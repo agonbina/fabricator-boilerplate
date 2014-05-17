@@ -1,0 +1,44 @@
+{{> intro}}
+
+{{> menu}}
+
+<div class="f-container">
+	<div class="f-main">
+
+		<div class="f-menu-bar">
+			<span class="f-menu-toggle f-icon-menu"></span>
+		</div>
+
+		<h1 data-toggle="details">Components</h1>
+
+		{{#each components}}
+
+			<div class="f-item-group" id="{{id}}">
+
+				<div class="f-item-heading-group" data-toggle="details">
+					<span class="f-item-heading">{{name}}</span>
+					<div class="f-item-toggles">
+						<span class="f-toggle f-icon-code" data-toggle-control="code" title="toggle code"></span>
+					</div>
+				</div>
+
+				<div class="f-item-notes">
+					{{{notes}}}
+				</div>
+
+				<div class="f-item-preview">
+					{{{content}}}
+				</div>
+
+				<div class="f-item-code" data-toggle="code">
+					<pre><code class="language-markup">{{content}}</code></pre>
+				</div>
+
+			</div>
+
+		{{/each}}
+
+	</div>
+</div>
+
+{{> outro}}
