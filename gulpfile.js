@@ -70,7 +70,10 @@ gulp.task('styles:toolkit', function () {
 	return gulp.src(config.src.styles.toolkit)
 		.pipe(plumber())
 		.pipe(sass({
-			errLogToConsole: true
+			errLogToConsole: true,
+            includePaths: [
+                'bower_components/scut/dist'
+            ]
 		}))
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))

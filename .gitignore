@@ -5,3 +5,4 @@ src/fabricator/css
 src/toolkit/assets/css
 
 .idea
+bower_components
